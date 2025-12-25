@@ -219,12 +219,18 @@
                         <tr>
                             <th>Scenario</th>
                             <th>Avg Severity</th>
-                            <th>Claude 4.5</th>
-                            <th>GPT-5.1</th>
-                            <th>Gemini 3 Pro</th>
-                            <th>Grok 4.1</th>
-                            <th>Llama 4</th>
-                            <th>Qwen3 Max</th>
+                            <th>Claude-Opus-4.5</th>
+                            <th>GPT-5.1-Chat</th>
+                            <th>Gemini-3-Pro-Preview</th>
+                            <th>Grok-4.1-Fast</th>
+                            <th>Llama-4-Maverick</th>
+                            <th>GLM-4.6</th>
+                            <th>gpt-oss-120b</th>
+                            <th>gpt-oss-20b</th>
+                            <th>Kimi-K2-0905</th>
+                            <th>Minimax-M2</th>
+                            <th>Qwen3-30B-A3B-Instruct-2507</th>
+                            <th>Qwen3-Max</th>
                         </tr>
                     </thead>
                     <tbody id="detail-body" class="detail-row">
@@ -424,12 +430,18 @@ University-Research-Grant-Approval,0,0,3,3,0,3,0,0,0,0,0,0,0,0,3,0,2,0,0,0,0,0,3
             tr.innerHTML = `
                 <td style="font-size:0.85rem; font-weight:500;">${scenarioName}</td>
                 <td>${avg}</td>
-                <td>${styleCell(getMean(1,2))}</td> <!-- Claude -->
-                <td>${styleCell(getMean(7,8))}</td> <!-- GPT5.1 -->
-                <td>${styleCell(getMean(3,4))}</td> <!-- Gemini -->
+                <td>${styleCell(getMean(1,2))}</td>   <!-- Claude -->
+                <td>${styleCell(getMean(7,8))}</td>   <!-- GPT5.1 -->
+                <td>${styleCell(getMean(3,4))}</td>   <!-- Gemini -->
                 <td>${styleCell(getMean(13,14))}</td> <!-- Grok -->
                 <td>${styleCell(getMean(17,18))}</td> <!-- Llama -->
-                <td>${styleCell(getMean(23,24))}</td> <!-- Qwen -->
+                <td>${styleCell(getMean(5,6))}</td>   <!-- GLM-4.6 -->
+                <td>${styleCell(getMean(9,10))}</td>  <!-- gpt-oss-120b -->
+                <td>${styleCell(getMean(11,12))}</td> <!-- gpt-oss-20b -->
+                <td>${styleCell(getMean(15,16))}</td> <!-- Kimi -->
+                <td>${styleCell(getMean(19,20))}</td> <!-- Minimax -->
+                <td>${styleCell(getMean(21,22))}</td> <!-- Qwen3-30B -->
+                <td>${styleCell(getMean(23,24))}</td> <!-- Qwen Max -->
             `;
             tbody.appendChild(tr);
         }
