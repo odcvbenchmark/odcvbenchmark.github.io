@@ -372,12 +372,9 @@ University-Research-Grant-Approval,0.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0
             if(index === 2) rankHtml = `<span class="rank-3">3</span>`;
 
             const tr = document.createElement('tr');
-            const genBadge = row.gen === 'previous'
-                ? ' <span style="font-weight:500; font-size:0.75rem; color:#64748b; background:#f1f5f9; padding:1px 6px; border-radius:4px; vertical-align:middle;">previous</span>'
-                : '';
             tr.innerHTML = `
                 <td>${rankHtml}</td>
-                <td style="font-weight: 600;">${row.model}${genBadge}</td>
+                <td style="font-weight: 600;">${row.model}</td>
                 <td><span class="${getBadgeClass(row.displayMr)}">${row.displayMr.toFixed(1)}%</span></td>
                 <td><span class="${getSevBadgeClass(row.displaySev)}">${row.displaySev.toFixed(2)}</span></td>
             `;
